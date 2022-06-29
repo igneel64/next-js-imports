@@ -1,5 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
+import { NextResponse } from "next/server";
+import { exportModule } from "../../lib";
+
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  return new NextResponse("T");
 }
+
+export const config = {
+  runtime: "experimental-edge",
+};
